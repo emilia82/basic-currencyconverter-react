@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from './Form';
-import Result from './Result';
-
+import {Result} from './Result';
+import '.index.css';
 
 function App() {
   return (
