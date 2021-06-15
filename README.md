@@ -37,11 +37,11 @@ amerykański dolar, brytyjski funt, itd.
 ## How to use it? 
 
 1. Enter Amount of money in PLN in form
-![enterAmount](https://github.com/emilia82/basic-currencyconverter-react/blob/main/public/enterAmountInForm.gif?raw=true)
+![enterAmount](https://github.com/emilia82/basic-currencyconverter-react/blob/main/enterAmountInForm.gif?raw=true)
 
 2. Click on Button "Przelicz"
 - the ammount in euros will appear under the button
-![ClickTheButton](https://github.com/emilia82/basic-currencyconverter-react/blob/main/public/clickTheButton.gif?raw=true)
+![ClickTheButton](https://github.com/emilia82/basic-currencyconverter-react/blob/main/clickTheButton.gif?raw=true)
 
 ## Available Scripts
 
