@@ -49,11 +49,18 @@
 }
 
 .form__button--input {
-    background-color: #70add7;
+    background-color: #1b445f;
+    color: white;
+    border: none;
     text-decoration: none;
     padding: 10px;
     font-family: "Open Sans" sans-serif;
+    font-size: 20px;
   
+}
+
+.form__button--input:hover {
+    background-color: hsl(204, 56%, 44%);
 }
 
 .form__legendText {
