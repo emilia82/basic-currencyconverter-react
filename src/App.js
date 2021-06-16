@@ -1,16 +1,19 @@
 import React from 'react';
 import Form from './Form';
-import {Result} from './Result';
-import '.index.css';
+import Result from './Result';
+import { useState } from 'react';
 
-function App() {
+
+
+function App() 
   return (
     <div className="container">
    <Form />
-    <p className="form__result">Twój wynik Euro:    
-    <strong className="result"></strong></p>
+    result={Result}
+    calculateResult={calculateResult}
+     
     </div>
   );
-}
+
 
 export default App;

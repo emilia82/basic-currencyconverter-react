@@ -1,5 +1,5 @@
 import React from 'react';
-import "./style.css";
+
 
 export const Result = () => (
     <p className="form__result">
