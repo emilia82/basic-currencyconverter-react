@@ -1,7 +1,7 @@
 export const currency = [
 {
     name: "Euro",
-    rate: 9384,
+    rate: 4.9384,
 }
 ];
 
