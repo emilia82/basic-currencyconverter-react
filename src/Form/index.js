@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './style.css';
-import { result } from './Result';
 import { currency } from './currency'; 
 import Container from './Container';
 
