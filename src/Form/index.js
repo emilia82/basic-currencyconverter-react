@@ -19,10 +19,11 @@ const Form = ({ calculateResult, result }) => {
 
     return (
         <form className="form" onSubmit={onSubmit}>
-        <fieldset className="form__fieldset">
-            <legend className="form__legend">
-                Kalkulator Walutowy
+        <fieldset className="form__fieldset"> 
+            <legend className="form__legend"> 
+                Kalkulator Walutowy 
             </legend>
+            <ShowDate />
             <p className="form__legendText"> /pole oznaczone * jest wymagane </p>
                 <label className="form__labelText">
                     PLN*
