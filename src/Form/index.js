@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './style.css';
 import { currency as currencies } from '../currency'; 
 import Container from '../Container';
+import { ShowDate } from "../Data";
+import { Result } from "../Result";
 
 
 
