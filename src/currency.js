@@ -5,4 +5,4 @@ export const currency = [
 }
 ];
 
-export default Form;
+export default currency;

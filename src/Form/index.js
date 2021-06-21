@@ -1,13 +1,13 @@
 import React, {useState} from 'react';
 import './style.css';
-import { currency } from './currency'; 
-import Container from './Container';
+import { currency as currencies } from '../currency'; 
+import Container from '../Container';
 
 
 
 
 const Form = ({ calculateResult, result }) => {
-    const [currency] = useState(currency[0].short);
+    const [currency, setCurrency] = useState(currencies[0].short);
     const [amount, setAmount] = useState("");
 
     const onSubmit = (event) => {
