@@ -1,10 +1,9 @@
 import "./style.css";
 import { useState, useEffect } from "react";
 
-export const ShowDate = () => {
-    const [counter, setTime] = useState(0);
-    const newDate = new Date();
-    const todayDate = newDate.toLocaleDateString( {
+export const Date = () => {
+    const [date, setDate] = useState(new Date());
+    const todayDate = date.toLocaleDateString(undefined, {
         weekday: "long",
         day: "numeric",
         month: "long",
@@ -14,7 +13,7 @@ export const ShowDate = () => {
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setTime(previousCount => previousCount + 1);
+            setDate(newDate());
         }, 1000);
 
         return () => {
@@ -24,7 +23,7 @@ export const ShowDate = () => {
 
     return (
         <p className="date">
-            Dzisiejsza data: {todayDate}, {newDate.toLocaleTimeString()}
+            Dzisiejsza data: {todayDate}, {date.toLocaleTimeString()}
         </p>
     );
 };
