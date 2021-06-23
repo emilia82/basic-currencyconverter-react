@@ -24,7 +24,7 @@ export const ShowDate = () => {
 
     return (
         <p className="date">
-            Dzisiejsza data {todayDate}, {newDate.toLocaleTimeString()}
+            Dzisiejsza data: {todayDate}, {newDate.toLocaleTimeString()}
         </p>
     );
 };
