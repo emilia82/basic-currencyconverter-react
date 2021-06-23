@@ -7,13 +7,16 @@ export const Date = () => {
         weekday: "long",
         day: "numeric",
         month: "long",
-        year: "numeric"
+        year: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric"
 
     });
 
     useEffect(() => {
         const intervalId = setInterval(() => {
-            setDate(newDate());
+            setDate(new Date());
         }, 1000);
 
         return () => {
