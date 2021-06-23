@@ -26,7 +26,7 @@ export const Clock = () => {
 
     return (
         <p className="date">
-            Dzisiejsza data: {todayDate}, {date.toLocaleTimeString()}
+            Dzisiejsza data: {todayDate}
         </p>
     );
 };
