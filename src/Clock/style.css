@@ -1,11 +1,11 @@
-.date {
+.clock {
     font-size: 14px;
     display: flex;
     justify-content: flex-end;
 }
 
 @media (max-width: 767px) {
-    .date {
+    .clock {
       font-size: 11px;
     }
 }
