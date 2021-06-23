@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './style.css';
 import { currency as currencies } from '../currency';
 import Container from '../Container';
-import { Date } from "../Date";
+import Clock from "../Clock";
 import { Result } from "../Result";
 
 
@@ -19,7 +19,7 @@ const Form = ({ calculateResult, result }) => {
 
     return (
         <form className="form" onSubmit={onSubmit}>
-            <Date />
+            <Clock />
             <fieldset className="form__fieldset">
                 <legend className="form__legend">
                     Kalkulator Walutowy
