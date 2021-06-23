@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './style.css';
 import { currency as currencies } from '../currency';
-import Container from '../Container';
+
 import Clock from "../Clock";
 import { Result } from "../Result";
+
 
 
 
@@ -11,6 +12,22 @@ import { Result } from "../Result";
 const Form = ({ calculateResult, result }) => {
     const [currency, setCurrency] = useState(currencies[0].short);
     const [amount, setAmount] = useState("");
+    const [result, setResult] = useState();
+
+
+
+
+    const calculateResult = (currency, amount) => {
+        const rate = currency
+            .find(({ id }) => id === currency)
+            .rate;
+
+        setResult({
+            sourceAmount: +amount,
+            targetAmount: amount / rate,
+            currency
+        });
+    }
 
     const onSubmit = (event) => {
         event.preventDefault();
