@@ -24,7 +24,7 @@ const Form = ({ calculateResult, result }) => {
                 <legend className="form__legend">
                     Kalkulator Walutowy
                 </legend>
-                <ShowDate />
+
                 <p className="form__legendText"> /pole oznaczone * jest wymagane </p>
                 <label className="form__labelText">
                     PLN*
