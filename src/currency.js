@@ -1,8 +1,9 @@
-export const currency = [
+const currency = [
 {
+    id: "EUR",
     name: "Euro",
-    rate: 4.9384,
-}
+    rate: 4.5649,
+},
 ];
 
 export default currency;
