@@ -1,4 +1,4 @@
-const currency = [
+const currencies = [
 {
     id: "EUR",
     name: "Euro",
@@ -6,4 +6,4 @@ const currency = [
 },
 ];
 
-export default currency;
+export default currencies;
