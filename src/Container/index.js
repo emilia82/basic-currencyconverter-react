@@ -1,5 +1,6 @@
-import react from 'react';
-import { Result } from "../Result";
+import React from 'react';
+
+
 
 const Container = ({ children }) => (
     <main>
