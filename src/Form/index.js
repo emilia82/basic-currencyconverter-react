@@ -1,34 +1,16 @@
 import React, { useState } from 'react';
 import './style.css';
-import { currency as currencies } from '../currency';
+import currencies  from '../currency';
 
 import Clock from "../Clock";
-import { Result } from "../Result";
 
 
 
-
-
-const Form = ({ calculateResult, result }) => {
-    const [currency, setCurrency] = useState(currencies[0].short);
+const Form = ({ calculateResult}) => {
+    const [currency, setCurrency] = useState(currencies[0].id);
     const [amount, setAmount] = useState("");
-    const [result, setResult] = useState();
 
-
-
-
-    const calculateResult = (currency, amount) => {
-        const rate = currency
-            .find(({ id }) => id === currency)
-            .rate;
-
-        setResult({
-            sourceAmount: +amount,
-            targetAmount: amount / rate,
-            currency
-        });
-    }
-
+    
     const onSubmit = (event) => {
         event.preventDefault();
         calculateResult(currency, amount);
@@ -39,7 +21,7 @@ const Form = ({ calculateResult, result }) => {
             <Clock />
             <fieldset className="form__fieldset">
                 <legend className="form__legend">
-                    Kalkulator Walutowy
+                    Kalkulator Walutowy - przelicza PLN na EUR
                 </legend>
 
                 <p className="form__legendText"> /pole oznaczone * jest wymagane </p>
@@ -54,17 +36,29 @@ const Form = ({ calculateResult, result }) => {
                         min="0.01"
                         step="any"
                         required />
-                </label>
-                <p className="form__button">
+               </label>
+               <label className="form__labelText">
+                   <select className="input"
+
+                   value={currency}
+                   onChange={({ target }) => setCurrency(target.value)}
+                   >
+                       {currencies.map((currency) => (
+                           <option kedy={currency.id} value={currency.id}>
+                               {currency.name}
+                           </option>
+                       ))}
+                   </select>
+               </label>
+             <p className="form__button">
                     <input
                         className="form__button--input submit"
                         type="submit"
                         value="Przelicz!" />
                 </p>
             </fieldset>
-            <Result
-                result={Result}
-            />
+      
+      
         </form>
     );
 };
