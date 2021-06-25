@@ -1,35 +1,31 @@
 import Form from './Form';
-import Result from './Result';
 import { useState } from 'react';
 import Container from './Container';
-import { currency } from './currency';
+import currencies from './currency';
+import { Result } from "./Result";
 import "./index.css";
 
 
 function App() {
-
   const [result, setResult] = useState();
   const calculateResult = (currency, amount) => {
-    const rate = currency 
-    .find(({ short }) => short === currency)
-    .rate;
-
+    const rate = currencies.find(({ id }) => id === currency).rate;
     setResult({
       sourceAmount: +amount,
       targetAmount: amount / rate,
       currency
     });
   }
+  
 
   return (
     <Container>
-    <div className="container">
-   <Form  
-    result={Result}
+    <Form  
     calculateResult={calculateResult}
 
     />
-    </div>
+    <Result 
+    result={result}/>
     </Container>
   );
 };
