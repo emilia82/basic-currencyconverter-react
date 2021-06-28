@@ -18,7 +18,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-Simple and effective currency calculator. It Converts the number of zlotys entered by the user into Euro. 
+Effective currency calculator. Recalculates the amount entered by the user.
+The user selects the currency (EUR, USD, CHF, GB) to which he wants to convert PLN. 
 The result is shown under the calculator in the "Your Euro Score" section.
 
 The following technologies were used: HTML, CMS in the BEM convention and javascript.
@@ -28,11 +29,10 @@ into other currencies:: american dolars, british pounds, etc.
 
 - polish version: 
 
-Prosty i efektywny kalkulator walut. Konwertuje ilość złotówek wpisanych przez użytkownika na kwotę Euro.
+Efektywny kalkulator walut. Konwertuje ilość złotówek wpisanych przez użytkownika.
+Użytkownik wybiera walutę (EUR, USD, CHF, GB), na którą chce przliczyć PLN.
 Rezultat widoczny pod kalkulatorem w sekcji "Twój wynik Euro"
 
-W niedalekiej przyszłości program rozwijany będzie o możliwość przeliczania na inne waluty: 
-amerykański dolar, brytyjski funt, itd.
 
 ## How to use it? 
 
