@@ -18,7 +18,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Description
 
-Effective currency calculator. Recalculates the amount entered by the user.
+3 step effective Curency-Converter. Recalculates the amount entered by the user.
 The user selects the currency (EUR, USD, CHF, GB) to which he wants to convert PLN. 
 The result is shown under the calculator in the "Your Euro Score" section.
 
@@ -29,19 +29,22 @@ into other currencies:: american dolars, british pounds, etc.
 
 - polish version: 
 
-Efektywny kalkulator walut. Konwertuje ilość złotówek wpisanych przez użytkownika.
+3 krokowy efektywny Kalkulator Walut. Konwertuje ilość złotówek wpisanych przez użytkownika.
 Użytkownik wybiera walutę (EUR, USD, CHF, GB), na którą chce przliczyć PLN.
 Rezultat widoczny pod kalkulatorem w sekcji "Twój wynik Euro"
 
 
 ## How to use it? 
 
-1. Enter Amount of money in PLN in form
-![enterAmount](https://github.com/emilia82/basic-currencyconverter-react/blob/main/enterAmountInForm.gif?raw=true)
+1. Step 1 - Enter Amount of PLN
+![enterAmount](https://github.com/emilia82/basic-currencyconverter-react/blob/main/1-enterPLNAmount.gif?raw=true)
 
-2. Click on Button "Przelicz"
-- the ammount in euros will appear under the button
-![ClickTheButton](https://github.com/emilia82/basic-currencyconverter-react/blob/main/clickTheButton.gif?raw=true)
+2. Step 2 - Select Currency (EUR, USD, GB, CHF) 
+![selectCurrency](https://github.com/emilia82/basic-currencyconverter-react/blob/main/2-selectCurrency.gif?raw=true)
+
+2. Step 3 - Click on Button "Przelicz"
+- the result will appear under the button
+![ClickTheButton](https://github.com/emilia82/basic-currencyconverter-react/blob/main/3-clickTheButton.gif?raw=true)
 
 ## Available Scripts
 
