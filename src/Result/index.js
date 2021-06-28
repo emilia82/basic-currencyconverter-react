@@ -5,8 +5,8 @@ import "../index.css";
 export const Result = ({ result }) => (
     result !== undefined && (
     <p className="form__result">
-    Twój wynik Euro:    
-    <strong className="result">{result.targetAmount.toFixed(2)} &nbsp;{result.currency}
+    Twój Wynik:    
+    <strong className="result">  {result.targetAmount.toFixed(2)} &nbsp;{result.currency}
         </strong>
         </p>
 ));
