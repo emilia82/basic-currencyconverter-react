@@ -21,7 +21,7 @@ const Form = ({ calculateResult}) => {
             <Clock />
             <fieldset className="form__fieldset">
                 <legend className="form__legend">
-                    Kalkulator Walutowy - przelicza PLN na EUR
+                    Kalkulator Walutowy - przelicza PLN na EUR/USD/GB/CHF
                 </legend>
 
                 <p className="form__legendText"> /pole oznaczone * jest wymagane </p>
