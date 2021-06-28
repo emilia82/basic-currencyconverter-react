@@ -1,11 +1,12 @@
 .clock {
-    font-size: 14px;
-    display: flex;
-    justify-content: flex-end;
+  text-align: right;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 @media (max-width: 767px) {
-    .clock {
-      font-size: 10px;
-    }
+  .clock {
+    font-size: 10px;
+  }
 }
