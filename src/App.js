@@ -26,6 +26,7 @@ function App() {
     />
     <Result 
     result={result}/>
+    
     </Container>
   );
 };

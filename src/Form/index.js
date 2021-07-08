@@ -44,7 +44,7 @@ const Form = ({ calculateResult}) => {
                    onChange={({ target }) => setCurrency(target.value)}
                    >
                        {currencies.map((currency) => (
-                           <option kedy={currency.id} value={currency.id}>
+                           <option key={currency.id} value={currency.id}>
                                {currency.name}
                            </option>
                        ))}
