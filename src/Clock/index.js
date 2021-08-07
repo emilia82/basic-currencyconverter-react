@@ -1,5 +1,5 @@
-import "./style.css";
 import { useState, useEffect } from "react";
+import { Wrapper } from "./styled";
 
 export const Clock = () => {
     const [date, setDate] = useState(new Date());
@@ -25,9 +25,10 @@ export const Clock = () => {
     }, []); 
 
     return (
-        <p className="date">
-            Dzisiejsza data: {todayDate}
-        </p>
+        <Wrapper>
+          Dzisiejsza data: {todayDate}
+            </Wrapper>
+        
     );
 };
 
