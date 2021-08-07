@@ -1,15 +1,20 @@
 import React from 'react';
-import "../index.css";
+import { Wrapper } from '../Clock/styled';
 
 
 export const Result = ({ result }) => (
-    result !== undefined && (
-    <p className="form__result">
-    Twój Wynik:    
-    <strong className="result">  {result.targetAmount.toFixed(2)} &nbsp;{result.currency}
+    <Wrapper>
+    {!!result  && (
+        <>
+    {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;= 
+       { " " } 
+        <strong>  
+        {result.targetAmount.toFixed(2)}&nbsp;{result.currency}
         </strong>
-        </p>
-));
+        </>
+    )}
+        </Wrapper>
+);
 
 
 
