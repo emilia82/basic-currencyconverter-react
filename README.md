@@ -10,11 +10,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Technology used: 
 
-- HTML
-- CSS /BEM 
-- Flexbox
-- Javascript
+- Semantic HTML
+- CSS/BEM/Flexbox 
+- ES6 features
 - React.js
+- Custome Hooks,
+- Styled-Components
+- LocalStorage
 
 ## Description
 
