@@ -1,9 +1,8 @@
-import { useState, useEffect } from "react";
 import { Wrapper } from "./styled";
+import { useCurrentDate } from "./useCurrentDate";
 
-export const Clock = () => {
-    const [date, setDate] = useState(new Date());
-    const todayDate = date.toLocaleDateString(undefined, {
+   
+const todayDate = (date) => date.toLocaleDateString(undefined, {
         weekday: "long",
         day: "numeric",
         month: "long",
@@ -11,22 +10,16 @@ export const Clock = () => {
         hour: "numeric",
         minute: "numeric",
         second: "numeric"
-
     });
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            setDate(new Date());
-        }, 1000);
-
-        return () => {
-            clearInterval(intervalId);
-        };
-    }, []); 
+    
+    export const Clock = () => {
+        const date = useCurrentDate();
+    
 
     return (
         <Wrapper>
-          Dzisiejsza data: {todayDate}
+          Dzisiejsza data: {todayDate(date)}
             </Wrapper>
         
     );
