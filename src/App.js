@@ -1,9 +1,13 @@
 import Form from './Form';
 import { useState } from 'react';
-import Container from './Container';
+import { GlobalStyle} from "./GlobalStyle";
 import currencies from './currency';
 import { Result } from "./Result";
 import "./index.css";
+import { Wrapper } from './styled';
+
+
+
 
 
 function App() {
@@ -19,7 +23,8 @@ function App() {
   
 
   return (
-    <Container>
+    <Wrapper>
+
     <Form  
     calculateResult={calculateResult}
 
@@ -27,7 +32,7 @@ function App() {
     <Result 
     result={result}/>
     
-    </Container>
+    </Wrapper>
   );
 };
  
