@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
-
-import { Loading, Failure, Info, Field, LabelText } from "./styled"
+import { Loading, Failure, Info, Field, LabelText, Header, Button } from "./styled"
 import { useRatesData } from './useRatesData';
-
+import { Result } from "..Result";
 
 
 export const Form = () => {
     const [result, setResult] = useState();
-    const ratesData = useRatesData(); 
+    const ratesData = useRatesData();
 
     const calculateResult = (currency, amount) => {
         const rate = ratesData.rates[currency];
@@ -21,7 +20,7 @@ export const Form = () => {
 
     const [currency, setCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
-    
+
     const onSubmit = (event) => {
         event.preventDefault();
         calculateResult(currency, amount);
@@ -30,14 +29,9 @@ export const Form = () => {
     return (
         <form onSubmit={onSubmit}>
             <Header>
-            Kalkulator Walutowy
+                Kalkulator Walutowy
             </Header>
-            {/* <Clock />
-            <fieldset className="form__fieldset">
-                <legend className="form__legend"> */}
-                    
-                {/* </legend> */}
-                {ratesData.state === "loading"
+            {ratesData.state === "loading"
                 ? (
                     <Loading>
                         Sekundka... <br />Ładuję kursy walut z Europejskiego Banku Centralnego
@@ -50,54 +44,52 @@ export const Form = () => {
                             Hmmm... Coś poszło nie tak. Sprawdź czy masz połączenie z internetem.
                         </Failure>
                     ) : (
-                <>
+                        <>
 
-                <p className="form__legendText"> /pole oznaczone * jest wymagane </p>
-                <label>
-                <LabelText>Kwota w PLN*</LabelText>
-                    
-                    <input
-                        className="input"
-                        type="number"
-                        value={amount}
-                        onChange={({ target }) => setAmount(target.value)}
-                        placeholder="Wpisz kwotę w zł"
-                        min="0.01"
-                        step="any"
-                        required 
-                        />
-               </label>
-                <p>
-               <label>
-                   <LabelText>Waluta:</LabelText>
-                   <Field
-                   as="select"
-                   value={currency}
-                   onChange={({ target }) => setCurrency(target.value)}
-                   >
-                       {!!ratesData.rates && Object.keys(ratesData.rates).map(((currency) => (
-                       <option 
-                           key={currency.id} 
-                           value={currency.id}
-                           >
-                               {currency.name}
-                           </option>
-                       )))}
-                   </Field>
-               </label>
-               </p>
-             <p>
-                    <Button>Przelicz</Button>
-                </p>            
-                <Info>
-                    Kursy walut pobierane są z Europejskiego Banku Centralnego. 
-                </Info>
-                <Result result={result} />
-                </>  
-                    )
-    )}
-    </form>
-    );
-};
+                            <p>
+                                <label>
+                                    <LabelText>Kwota w PLN*</LabelText>
 
-export default Form;
+                                    <Field
+                                        type="number"
+                                        value={amount}
+                                        onChange={({ target }) => setAmount(target.value)}
+                                        placeholder="Wpisz kwotę w zł"
+                                        min="0.01"
+                                        step="any"
+                                        required
+                                    />
+                                </label>
+                                <p>
+                                    <label>
+                                        <LabelText>Waluta:</LabelText>
+                                        <Field
+                                            as="select"
+                                            value={currency}
+                                            onChange={({ target }) => setCurrency(target.value)}
+                                        >
+                                            {Object.keys(ratesData.rates).map(((currency) => (
+                                                <option
+                                                    key={currency}
+                                                    value={currency}
+                                                >
+                                                    {currency}
+                                                </option>
+                                            )))}
+                                        </Field>
+                                    </label>
+                                </p>
+                                <p>
+                                    <Button>Przelicz</Button>
+                                </p>
+                                <Info>
+                                    Kursy walut pobierane są z Europejskiego Banku Centralnego.
+                                </Info>
+                                <Result result={result} />
+                                </>
+                            )}
+                        </form>
+                    );
+                };
+
+            export default Form;
