@@ -8,12 +8,12 @@ export const Label = styled.label`
     margin-right: 5px;
     font-size: 25px;
 `;
-    
+
 
 export const Result = styled.p`
     text-align: center;
     font-size: 25px;
-`; 
+`;
 
 export const Info = styled.p`
     font-size: 15px;
@@ -54,6 +54,18 @@ export const Button = styled.button`
     filter: brightness(130%);
     }
 
+`;
+
+export const Header = styled.p`
+    margin: 10 auto;
+    text-align: left;
+`;
+
+export const Info = styled.p`
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    color: ${({ theme }) => theme.color.emperor};
 `;
 
 export const Legend = styled.p`
