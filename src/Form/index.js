@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
-import './style.css';
-import currencies  from '../currency';
 
-import Clock from "../Clock";
-
+import { Loading, Failure, Info, Field, LabelText } from "./styled"
+import { useRatesData } from './useRatesData';
 
 
-const Form = ({ calculateResult}) => {
-    const [currency, setCurrency] = useState(currencies[0].id);
+
+export const Form = () => {
+    const [result, setResult] = useState();
+    const ratesData = useRatesData(); 
+
+    const calculateResult = (currency, amount) => {
+        const rate = ratesData.rates[currency];
+
+        setResult({
+            sourceAmount: +amount,
+            targetAmount: amount * rate,
+            currency,
+        });
+    }
+
+    const [currency, setCurrency] = useState("EUR");
     const [amount, setAmount] = useState("");
-
     
     const onSubmit = (event) => {
         event.preventDefault();
@@ -17,16 +28,34 @@ const Form = ({ calculateResult}) => {
     }
 
     return (
-        <form className="form" onSubmit={onSubmit}>
-            <Clock />
+        <form onSubmit={onSubmit}>
+            <Header>
+            Kalkulator Walutowy
+            </Header>
+            {/* <Clock />
             <fieldset className="form__fieldset">
-                <legend className="form__legend">
-                    Kalkulator Walutowy - przelicza PLN na EUR/USD/GB/CHF
-                </legend>
+                <legend className="form__legend"> */}
+                    
+                {/* </legend> */}
+                {ratesData.state === "loading"
+                ? (
+                    <Loading>
+                        Sekundka... <br />Ładuję kursy walut z Europejskiego Banku Centralnego
+                    </Loading>
+                )
+                : (
+                    ratesData.state === "error" ? (
+
+                        <Failure>
+                            Hmmm... Coś poszło nie tak. Sprawdź czy masz połączenie z internetem.
+                        </Failure>
+                    ) : (
+                <>
 
                 <p className="form__legendText"> /pole oznaczone * jest wymagane </p>
-                <label className="form__labelText">
-                    PLN*
+                <label>
+                <LabelText>Kwota w PLN*</LabelText>
+                    
                     <input
                         className="input"
                         type="number"
@@ -35,31 +64,39 @@ const Form = ({ calculateResult}) => {
                         placeholder="Wpisz kwotę w zł"
                         min="0.01"
                         step="any"
-                        required />
+                        required 
+                        />
                </label>
-               <label className="form__labelText">
-                   <select className="input"
-
+                <p>
+               <label>
+                   <LabelText>Waluta:</LabelText>
+                   <Field
+                   as="select"
                    value={currency}
                    onChange={({ target }) => setCurrency(target.value)}
                    >
-                       {currencies.map((currency) => (
-                           <option key={currency.id} value={currency.id}>
+                       {!!ratesData.rates && Object.keys(ratesData.rates).map(((currency) => (
+                       <option 
+                           key={currency.id} 
+                           value={currency.id}
+                           >
                                {currency.name}
                            </option>
-                       ))}
-                   </select>
+                       )))}
+                   </Field>
                </label>
-             <p className="form__button">
-                    <input
-                        className="form__button--input submit"
-                        type="submit"
-                        value="Przelicz!" />
-                </p>
-            </fieldset>
-      
-      
-        </form>
+               </p>
+             <p>
+                    <Button>Przelicz</Button>
+                </p>            
+                <Info>
+                    Kursy walut pobierane są z Europejskiego Banku Centralnego. 
+                </Info>
+                <Result result={result} />
+                </>  
+                    )
+    )}
+    </form>
     );
 };
 

@@ -54,19 +54,6 @@ export const Button = styled.button`
     filter: brightness(130%);
     }
 
-.form__button--input {
-    background-color: #1b445f;
-    color: white;
-    border: none;
-    text-decoration: none;
-    padding: 10px;
-    font-family: "Open Sans" sans-serif;
-    font-size: 20px;
-  
-}
-
-.form__button--input:hover {
-    background-color: hsl(204, 56%, 44%);
 `;
 
 export const Legend = styled.p`
@@ -76,3 +63,11 @@ export const Legend = styled.p`
     padding: 10px;
     font-size: 15px;
     `;
+
+export const Loading = styled.p`
+    color: ${({ theme }) => theme.color.cello};
+`;
+
+export const Failure = styled.p`
+    color: ${({ theme }) => theme.color.crimson};
+`;
