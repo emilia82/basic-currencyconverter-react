@@ -1,41 +1,26 @@
 import Form from './Form';
-import { useState } from 'react';
-import { GlobalStyle} from "./GlobalStyle";
-import currencies from './currency';
 import { Result } from "./Result";
 import "./index.css";
 import { Wrapper } from './styled';
-
-
-
+import { Form } from "./Form";
+import { Clock } from "./Clock";
 
 
 function App() {
-  const [result, setResult] = useState();
-  const calculateResult = (currency, amount) => {
-    const rate = currencies.find(({ id }) => id === currency).rate;
-    setResult({
-      sourceAmount: +amount,
-      targetAmount: amount / rate,
-      currency
-    });
-  }
-  
 
   return (
     <Wrapper>
+      <Clock />
+      <Form
+        calculateResult={calculateResult}
+      />
+      <Result
+        result={result} />
 
-    <Form  
-    calculateResult={calculateResult}
-
-    />
-    <Result 
-    result={result}/>
-    
     </Wrapper>
   );
 };
- 
+
 
 
 export default App;
