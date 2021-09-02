@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Loading, Failure, Info, Field, LabelText, Header, Button } from "./styled"
 import { useRatesData } from './useRatesData';
-import { Result } from "..Result";
+import { Result } from "../Result";
 
 
 export const Form = () => {
@@ -45,7 +45,6 @@ export const Form = () => {
                         </Failure>
                     ) : (
                         <>
-
                             <p>
                                 <label>
                                     <LabelText>Kwota w PLN*</LabelText>
@@ -60,36 +59,38 @@ export const Form = () => {
                                         required
                                     />
                                 </label>
-                                <p>
-                                    <label>
-                                        <LabelText>Waluta:</LabelText>
-                                        <Field
-                                            as="select"
-                                            value={currency}
-                                            onChange={({ target }) => setCurrency(target.value)}
-                                        >
-                                            {Object.keys(ratesData.rates).map(((currency) => (
-                                                <option
-                                                    key={currency}
-                                                    value={currency}
-                                                >
-                                                    {currency}
-                                                </option>
-                                            )))}
-                                        </Field>
-                                    </label>
-                                </p>
-                                <p>
-                                    <Button>Przelicz</Button>
-                                </p>
-                                <Info>
-                                    Kursy walut pobierane są z Europejskiego Banku Centralnego.
-                                </Info>
-                                <Result result={result} />
-                                </>
-                            )}
-                        </form>
-                    );
-                };
+                            </p>
+                            <p>
+                                <label>
+                                    <LabelText>Waluta:</LabelText>
+                                    <Field
+                                        as="select"
+                                        value={currency}
+                                        onChange={({ target }) => setCurrency(target.value)}
+                                    >
+                                        {Object.keys(ratesData.rates).map(((currency) => (
+                                            <option
+                                                key={currency}
+                                                value={currency}
+                                            >
+                                                {currency}
+                                            </option>
+                                        )))}
+                                    </Field>
+                                </label>
+                            </p>
+                            <p>
+                                <Button>Przelicz</Button>
+                            </p>
+                            <Info>
+                                Kursy walut pobierane są z Europejskiego Banku Centralnego.
+                            </Info>
+                            <Result result={result} />
+                        </>
+                    )}
+                    
+        </form>
+    );
+};
 
-            export default Form;
+export default Form;
