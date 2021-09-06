@@ -13,16 +13,24 @@ export const Label = styled.label`
 export const Result = styled.p`
     text-align: center;
     font-size: 25px;
+    padding: 15px;
+`;
+
+export const Wrapper = styled.p`
+    text-align: center;
+    font-size: 25px;
+    padding: 15px;
+    color: cello;
 `;
 
 export const Info = styled.p`
     font-size: 15px;
     text-align: center;
-    color: ${({ theme }) => theme.color.red};
+    color: ${({ theme }) => theme.color.cello};
 `;
 
 export const LabelText = styled.span`
-    font-size: 20px;
+    font-size: 15px;
 `;
 
 export const Field = styled.input`
@@ -56,17 +64,14 @@ export const Button = styled.button`
 
 `;
 
-export const Header = styled.p`
+export const Header = styled.h1`
     margin: 10 auto;
     text-align: left;
+    font-size: 25px;
+    color: black;
+    padding: 10px;
 `;
 
-export const Info = styled.p`
-    text-align: center;
-    padding: 10px;
-    font-size: 15px;
-    color: ${({ theme }) => theme.color.emperor};
-`;
 
 export const Legend = styled.p`
     background-color: ${({ theme }) => theme.color.cello};
@@ -76,10 +81,18 @@ export const Legend = styled.p`
     font-size: 15px;
     `;
 
+export const Input = styled.input`
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    `;
+
 export const Loading = styled.p`
     color: ${({ theme }) => theme.color.cello};
+    padding: 20px;
 `;
 
 export const Failure = styled.p`
     color: ${({ theme }) => theme.color.red};
+    padding: 20px;
 `;
