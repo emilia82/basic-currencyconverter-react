@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Loading, Failure, Info, Field, LabelText, Header, Button } from "./styled"
+import { Loading, Failure, Info, Input, LabelText, Header, Button } from "./styled"
 import { useRatesData } from './useRatesData';
 import { Result } from "../Result";
 
@@ -28,6 +28,7 @@ export const Form = () => {
 
     return (
         <form onSubmit={onSubmit}>
+            
             <Header>
                 Kalkulator Walutowy
             </Header>
@@ -85,10 +86,12 @@ export const Form = () => {
                             <Info>
                                 Kursy walut pobierane są z Europejskiego Banku Centralnego.
                             </Info>
+                            
                             <Result result={result} />
                         </>
                     )
-                )},                
+                )}, 
+                             
         </form>
     );
 };
