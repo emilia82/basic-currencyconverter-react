@@ -81,5 +81,5 @@ export const Loading = styled.p`
 `;
 
 export const Failure = styled.p`
-    color: ${({ theme }) => theme.color.crimson};
+    color: ${({ theme }) => theme.color.red};
 `;
