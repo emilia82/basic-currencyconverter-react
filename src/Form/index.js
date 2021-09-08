@@ -3,7 +3,6 @@ import { Loading, Failure, Info, Input, LabelText, Header, Button } from "./styl
 import { useRatesData } from './useRatesData';
 import { Result } from "../Result";
 
-
 export const Form = () => {
     const [result, setResult] = useState();
     const ratesData = useRatesData();
@@ -85,7 +84,6 @@ export const Form = () => {
                             <Info>
                                 Kursy walut pobierane są z Europejskiego Banku Centralnego.
                             </Info>
-
                             <Result result={result} />
                         </>
                     )
