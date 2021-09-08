@@ -1,10 +1,8 @@
 import React from 'react';
-import { Wrapper } from '../Clock/styled';
 import { StyledResult } from './styled';
 
 export const Result = ({ result }) => (
-    <Wrapper>
-        <StyledResult />
+        <StyledResult> 
         {!!result && (
             <>
                 {result.sourceAmount.toFixed(2)}&nbsp;PLN&nbsp;=&nbsp; {" "}
@@ -13,7 +11,7 @@ export const Result = ({ result }) => (
                 </strong>
             </>
         )}
-    </Wrapper>
+        </StyledResult>
 );
 
 
