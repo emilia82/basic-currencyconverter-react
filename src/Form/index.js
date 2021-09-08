@@ -46,7 +46,7 @@ export const Form = () => {
                         <>
                             <p>
                                 <label>
-                                    <LabelText>Kwota w PLN*</LabelText>
+                                    <LabelText>Kwota w PLN* </LabelText>
 
                                     <Input
                                         type="number"
@@ -61,7 +61,7 @@ export const Form = () => {
                             </p>
                             <p>
                                 <label>
-                                    <LabelText>Waluta:</LabelText>
+                                    <LabelText>Waluta: </LabelText>
                                     <Input
                                         as="select"
                                         value={currency}
