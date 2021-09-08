@@ -1,25 +1,11 @@
 import styled from "styled-components";
 
-
 export const Label = styled.label`
     width: 100%;
     max-width: 150px;
     display: inline-block;
     margin-right: 5px;
     font-size: 25px;
-`;
-
-export const Result = styled.p`
-    text-align: center;
-    font-size: 25px;
-    padding: 15px;
-`;
-
-export const Wrapper = styled.p`
-    text-align: center;
-    font-size: 25px;
-    padding: 15px;
-    color: cello;
 `;
 
 export const Info = styled.p`
@@ -45,7 +31,7 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.color.cello};
     color: ${({ theme }) => theme.color.white};
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
     text-decoration: none;
     transition: 0.3s;
