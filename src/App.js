@@ -1,8 +1,7 @@
-import { Form }  from './Form';
+import { Form } from './Form';
 import { Result } from "./Result";
 import { Wrapper } from './styled';
 import { Clock } from "./Clock";
-
 
 function App() {
 
@@ -10,13 +9,10 @@ function App() {
     <Wrapper>
       <Clock />
       <Form />
-
       <Result
       />
     </Wrapper>
   );
 };
-
-
 
 export default App;

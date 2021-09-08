@@ -9,7 +9,7 @@ export const useRatesData = () => {
         const fetchRates = async () => {
             try {
                 const response = await fetch("https://api.exchangerate.host/latest?base=PLN");
-                
+
                 if (!response.ok) {
                     throw new Error(response.statusText);
                 }
@@ -33,6 +33,5 @@ export const useRatesData = () => {
     }, []);
 
     return ratesData;
-
 };
 

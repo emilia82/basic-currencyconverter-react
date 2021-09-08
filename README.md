@@ -10,18 +10,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Technology used: 
 
-- Semantic HTML
+- Semantic HTML5
 - CSS/BEM/Flexbox 
 - ES6 features
 - React.js
 - Custome Hooks,
 - Styled-Components
 - LocalStorage
+- API 
 
 ## Description
 
 3 step effective Curency-Converter. Recalculates the amount entered by the user.
-The user selects the currency (EUR, USD, CHF, GB) to which he wants to convert PLN. 
+The user selects the currency to which he wants to convert. 
 The result is shown under the calculator in the "Your Euro Score" section.
 
 The following technologies were used: HTML, CMS in the BEM convention and javascript.
@@ -32,16 +33,15 @@ into other currencies:: american dolars, british pounds, etc.
 - polish version: 
 
 3 krokowy efektywny Kalkulator Walut. Konwertuje ilość złotówek wpisanych przez użytkownika.
-Użytkownik wybiera walutę (EUR, USD, CHF, GB), na którą chce przliczyć PLN.
-Rezultat widoczny pod kalkulatorem w sekcji "Twój wynik Euro"
-
+Użytkownik wybiera walutę, na którą chce przliczyć PLN. Waluty są pobierane z API. 
+Po kliknięciu w przycisk "przelicz" pokazuje się wynik - rezultat widoczny pod przyciskiem w sekcji "Twój wynik".
 
 ## How to use it? 
 
 1. Step 1 - Enter Amount of PLN
 ![enterAmount](https://github.com/emilia82/basic-currencyconverter-react/blob/main/1-enterPLNAmount.gif?raw=true)
 
-2. Step 2 - Select Currency (EUR, USD, GB, CHF) 
+2. Step 2 - Select Currency  
 ![selectCurrency](https://github.com/emilia82/basic-currencyconverter-react/blob/main/2-selectCurrency.gif?raw=true)
 
 2. Step 3 - Click on Button "Przelicz"

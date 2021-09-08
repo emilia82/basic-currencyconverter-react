@@ -19,5 +19,4 @@ html {
   min-height: 115vh;
   font-family: 'Open Sans', sans-serif;
 }
-
 `;

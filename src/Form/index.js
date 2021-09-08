@@ -28,7 +28,6 @@ export const Form = () => {
 
     return (
         <form onSubmit={onSubmit}>
-            
             <Header>
                 Kalkulator Walutowy
             </Header>
@@ -86,12 +85,11 @@ export const Form = () => {
                             <Info>
                                 Kursy walut pobierane są z Europejskiego Banku Centralnego.
                             </Info>
-                            
+
                             <Result result={result} />
                         </>
                     )
-                )}, 
-                             
+                )},
         </form>
     );
 };
