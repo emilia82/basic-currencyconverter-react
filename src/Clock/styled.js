@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-    font-size: 14px;
+    font-size: 15px;
     display: flex;
-    text-align: ight;
+    text-align: right;
     font-family: "Open-Sans", sans-serif;
-
 `;
