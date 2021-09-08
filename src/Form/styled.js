@@ -9,7 +9,6 @@ export const Label = styled.label`
     font-size: 25px;
 `;
 
-
 export const Result = styled.p`
     text-align: center;
     font-size: 25px;
