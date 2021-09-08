@@ -16,7 +16,6 @@ html {
   justify-content: center;
   background-image: url("${background}");
   background-position: center;
-  min-height: 115vh;
+  min-height: 100vh;
   font-family: 'Open Sans', sans-serif;
-}
-`;
+}`;
